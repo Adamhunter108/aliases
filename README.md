@@ -1,7 +1,7 @@
 # aliases :microphone:
 
 ##### `About`:
-Aliases is a web-app , built with Python using the Django framework, that stores Russell Jone's known rap aliases in an SQLite database and will display a random one using a refresh button.  The app features login functionality that allows a user to add an alias to the databse.
+Aliases is a web-app , built with Python using the Django framework, that stores Russell Jone's known rap aliases in an SQLite database and will display a random one using a refresh button.  The app features login functionality that allows a user to add an alias to the database.
 
 ---
 
