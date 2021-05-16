@@ -1,0 +1,80 @@
+
+{% load static %}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'joebananas/style.css' %}">
+
+
+
+{% block content %}
+
+
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">
+
+    	{% if user.is_authenticated %}
+
+ 		 <p style="font-family: sans-serif">Hey {{ user.username }}, baby I got your money</p><p style="font-family: sans-serif">don't you worry, I said hey</p><p style="font-family: sans-serif">{{ user.username }} I got your money</p>
+
+		{% endif %}
+
+    </h5>
+
+		{% if user.is_authenticated %}
+
+     	<a href="{% url 'home' %}" style="font-family: sans-serif;">Home</a>
+
+    	{% endif %}
+
+    <br />
+    <span>
+	<a href="{% url 'logout' %}" class="logout" href="/logout">Logout</a>
+    </span>
+
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+
+
+
+<br />
+
+<form class="add" method="POST">
+
+	<div>
+	{% csrf_token %}
+
+  <label style="font-family: sans-serif;">New Name:</label>
+
+  <input class="add_name" placeholder="i.e. Dirt McGirt" />
+
+
+<!--   	{{ form.as_p }} -->
+
+  	<input type="submit" value="Submit" />
+  </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+
+{% endblock %}
+
+
+
+
+
