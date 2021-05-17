@@ -13,6 +13,21 @@
 
 {% block content %}
 
+<style>
+.new_name_form {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+h2 {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+</style>
+
 
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
@@ -51,22 +66,25 @@
 
 
 <br />
+<h2>Think of another ODB alias??</h2>
+<br />
+<div class="new_name_form">
+  <form class="add" method="POST" enctype="multipart/form-data">
 
-<form class="add" method="POST">
+  	<div>
+  	{% csrf_token %}
+    <!-- for security -->
 
-	<div>
-	{% csrf_token %}
+    <!-- old form -->
+    <!-- <label style="font-family: sans-serif;">Think of another one?</label> -->
+    <!-- <input class="add_name" placeholder="i.e. Dirt McGirt" /> -->
 
-  <label style="font-family: sans-serif;">New Name:</label>
+    {{ form.as_p }}
 
-  <input class="add_name" placeholder="i.e. Dirt McGirt" />
-
-
-<!--   	{{ form.as_p }} -->
-
-  	<input type="submit" value="Submit" />
-  </div>
-</form>
+    	<input type="submit" value="Submit" />
+    </div>
+  </form>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 

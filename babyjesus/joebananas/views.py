@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.decorators import login_required
 import random
+from django.http import HttpResponse, HttpResponseNotFound, Http404,  HttpResponseRedirect
 
 
 def home(request):
@@ -20,26 +21,28 @@ def home(request):
 	return render(request, 'joebananas/home.html', context)
 	
 
-# class add_name(CreateView):
-# 	model = Names
-# 	temmplate_name = "joebananas/add_name.html"
-# 	form_class = AddNameForm
-	
-
 @login_required
 def add_name(request):
 	
 	model = Names
-	fields = '__all__'
-	form = AddNameForm()
+
+	form = AddNameForm(request.POST or None)
+
+	if form.is_valid():
+		form.save()
 
 	context = {
 		'form': form
 	}
 
+	print(request.POST)
+	# checking the submission in the console
+
+	# return render(request, "joebananas/add_name.html", {'form': form})
+	# another way to pass context
+
 	return render(request, "joebananas/add_name.html", context)
 	
-
 
 def login_view(request):
 	username = request.POST["username"]
@@ -56,4 +59,4 @@ def login_view(request):
 
 def log_out(request):
     logout(request)
-    return redirect("/")
+    return redirect("joebananas/home.html")

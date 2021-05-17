@@ -11,12 +11,28 @@
 
 {% block content %}
 
+<style>
+.login {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+h2 {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+</style>
+
+
+
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <h5 class="text-white h4">
 
-     <p style="font-family: sans-serif">Hey {{ user.username }}, baby I got your money</p><p style="font-family: sans-serif">don't you worry, I said hey</p><p style="font-family: sans-serif">{{ user.username }} I got your money</p>
-
+     <p style="font-family: sans-serif">Here I go, deep type flow</p><p style="font-family: sans-serif">Jacques Cousteau could never get this low</p>
     </h5>
 
       <a href="{% url 'home' %}" style="font-family: sans-serif;">Home</a>
@@ -36,18 +52,18 @@
   <form class="login" method="post">
     <div>
       {% csrf_token %}
+      <!-- for security -->
 
-<!--       {{ form.as_p }} class based form -->
-<!--       <label name="username" style="font-family: sans-serif;">Username:</label>
+      <!-- old form -->
+<!--  <label name="username" style="font-family: sans-serif;">Username:</label>
       <input type ="email" id="username" name="username" placeholder="plz enter ur username" />
       <br />
       <label name="password" style="font-family: sans-serif;">Password:</label>
-      <input type="password" id="password" name="password" placeholder="plz enter ur password" />
- -->
+      <input type="password" id="password" name="password" placeholder="plz enter ur password" />  -->
+
 
      {{ form.as_p }}
-
-   <!--  (rendering as <p>) -->
+   <!-- rendering as <p> -->
      
       <br />
       <input type="submit" value="Submit" />
