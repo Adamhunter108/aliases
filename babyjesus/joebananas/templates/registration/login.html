@@ -6,19 +6,12 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-
 <link rel="stylesheet" type="text/css" href="{% static 'joebananas/style.css' %}">
 
 {% block content %}
 
 <style>
-.login {
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-h2 {
+.login, h2 {
   font-family: sans-serif;
   display: flex;
   align-items: center;
@@ -26,20 +19,17 @@ h2 {
 }
 </style>
 
-
-
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
-    <h5 class="text-white h4">
-
-     <p style="font-family: sans-serif">Here I go, deep type flow</p><p style="font-family: sans-serif">Jacques Cousteau could never get this low</p>
-    </h5>
 
       <a href="{% url 'home' %}" style="font-family: sans-serif;">Home</a>
 
       <br />
       <a href="{% url 'signup' %}" style="font-family: sans-serif;">Sign Up</a>
-
+      <br /><br />
+      <h5 class="text-white h4">
+     <p style="font-family: sans-serif">Here I go, deep type flow</p><p style="font-family: sans-serif">Jacques Cousteau could never get this low</p>
+    </h5>
   </div>
 </div>
 <nav class="navbar navbar-dark bg-dark">
@@ -63,7 +53,6 @@ h2 {
       <br />
       <label name="password" style="font-family: sans-serif;">Password:</label>
       <input type="password" id="password" name="password" placeholder="plz enter ur password" />  -->
-
 
      {{ form.as_p }}
    <!-- rendering as <p> -->
