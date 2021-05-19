@@ -5,4 +5,4 @@ Aliases is a web-app , built with Python using the Django framework, that stores
 
 
 ##### `View live:`
-<python-anywhere-deployment-link>
+* `python-anywhere-deployment-link`
