@@ -23,4 +23,4 @@ Aliases is a web-app , built with Python using the Django framework, that stores
 
 ---
 
-[demo](https://media.giphy.com/media/M6eTjb23JL6QuKeyGS/giphy.gif)
+![demo](https://media.giphy.com/media/M6eTjb23JL6QuKeyGS/giphy.gif)
