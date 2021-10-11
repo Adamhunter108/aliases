@@ -1,7 +1,7 @@
 # aliases :microphone:
 
 ##### `About:`
-Aliases is a web-app , built with Python using the Django framework, that stores Russell Tyrone Jones' known rap aliases in an SQLite database. The main page displays a random alias and includes a refresh button for accessing random aliases.  The app features login functionality that allows a user to add an alias to the database as well as a sign up page to register a new user.
+Aliases is a web-app , built with Python using the Django framework, that stores Russell Tyrone Jones' known rap aliases in an SQLite database. The main page displays a random alias and includes a refresh button for accessing random aliases.  The app features user login/registration functionality that allows a registered user to add an alias to the database.
 
 ---
 
@@ -17,6 +17,10 @@ Aliases is a web-app , built with Python using the Django framework, that stores
 * Activate the virtual environment:
 	`pipenv shell`
 * `cd` into project directory (manage.py) and start the Django server:
-	`python3 manage.py runserver`
+	`python manage.py runserver`
 * In a browser (preferably Google Chrome), navigate to:
 	`http://localhost:8000/`
+
+---
+
+[demo](https://media.giphy.com/media/M6eTjb23JL6QuKeyGS/giphy.gif)
